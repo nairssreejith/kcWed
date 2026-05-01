@@ -1,0 +1,124 @@
+/* Global app styles for KC's portfolio */
+.App {
+  min-height: 100vh;
+  background: #FAF5EC;
+  color: #141210;
+}
+
+/* Film grain overlay (very subtle) */
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.08  0 0 0 0 0.06  0 0 0 0 0.05  0 0 0 0.12 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  opacity: 0.35;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Marquee ticker */
+@keyframes kc-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.kc-marquee-track {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: kc-marquee 38s linear infinite;
+  will-change: transform;
+}
+.kc-marquee-track:hover { animation-play-state: paused; }
+
+/* Soft reveal on scroll (entrance animation) */
+@keyframes kc-rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.kc-rise { animation: kc-rise 0.8s cubic-bezier(.2,.7,.2,1) both; }
+
+/* Tape sticker */
+.kc-tape {
+  position: relative;
+  display: inline-block;
+  padding: 4px 14px;
+  background: rgba(232, 185, 94, 0.75);
+  font-family: 'Caveat', cursive;
+  font-size: 18px;
+  color: #2E1A24;
+  transform: rotate(-2.5deg);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.08);
+}
+.kc-tape::before, .kc-tape::after {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 10px;
+  background: repeating-linear-gradient(90deg, rgba(255,255,255,0.25) 0 2px, transparent 2px 5px);
+}
+.kc-tape::before { left: 0; }
+.kc-tape::after { right: 0; }
+
+/* Timeline dots */
+.kc-dot {
+  width: 12px; height: 12px; border-radius: 999px;
+  background: #D96E3A;
+  box-shadow: 0 0 0 4px #FAF5EC, 0 0 0 5px #2E1A24;
+}
+
+/* Button hover */
+.kc-btn-primary {
+  background: #2E1A24;
+  color: #FAF5EC;
+  transition: transform 220ms ease, background 220ms ease, box-shadow 220ms ease;
+}
+.kc-btn-primary:hover {
+  background: #D96E3A;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px -12px rgba(46,26,36,0.45);
+}
+
+.kc-btn-ghost {
+  background: transparent;
+  color: #2E1A24;
+  border: 1px solid #2E1A24;
+  transition: background 220ms ease, color 220ms ease, transform 220ms ease;
+}
+.kc-btn-ghost:hover {
+  background: #2E1A24;
+  color: #FAF5EC;
+  transform: translateY(-2px);
+}
+
+/* Section divider */
+.kc-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(46,26,36,0.2), transparent);
+}
+
+/* Glass card (mild) */
+.kc-glass {
+  background: rgba(255, 250, 240, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(46,26,36,0.08);
+}
+
+/* Smooth anchor scroll */
+html { scroll-behavior: smooth; }
+
+/* Cinematic letterbox */
+.kc-letterbox {
+  position: relative;
+}
+.kc-letterbox::before, .kc-letterbox::after {
+  content: "";
+  position: absolute; left: 0; right: 0;
+  height: 28px; background: #141210;
+  z-index: 2;
+}
+.kc-letterbox::before { top: 0; }
+.kc-letterbox::after { bottom: 0; }
+
+/* Selection color */
+::selection { background: #D96E3A; color: #FAF5EC; }
