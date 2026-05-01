@@ -6,7 +6,8 @@ export const profile = {
   fullTitle: "Kay Cee",
   age: 33,
   profession: "Software Engineer",
-  city: "Bengaluru, IN",
+  city: "Trivandrum, IN",
+  hometown: "Thrissur, IN",
   car: "Maruti Brezza",
   tagline: "33 years old. Mostly bug-free. Occasionally legendary.",
   taglineAlt: [
@@ -43,6 +44,7 @@ export const lifeResume = [
   { year: "2018", title: "Montage sequence", note: "Switched cities, shipped a product, learned to cook three dishes that people voluntarily eat." },
   { year: "2021", title: "Side quest: the Brezza", note: "Bought a car. Named her once, embarrassed myself, never told anyone." },
   { year: "2023", title: "Rising action", note: "Led a team. Led a trek. Led a watch-party for a 210-minute film. Survived all three." },
+  { year: "2024", title: "Enter the producers", note: "Aswathy and Santhwana conspire — quite gently — to get KC's next chapter rolling. Resistance was brief. Snacks helped." },
   { year: "2025", title: "Now playing", note: "Open for casting. Co-protagonist role available. Snacks provided." }
 ];
 
@@ -122,18 +124,24 @@ export const flags = {
 
 export const credits = {
   directedBy: "Life, mostly improvising.",
-  producedBy: "Two parents, one older sibling, and a golden retriever named Biscuit.",
+  producedBy: "Aswathy & Santhwana — executive producers, matchmakers-in-chief, and the only reason this feature got greenlit.",
+  castingBy: "Aswathy & Santhwana (again). They insist on a credit, and honestly, they've earned it.",
   musicBy: "A.R. Rahman (unofficially), and whoever made the Interstellar score.",
-  specialThanks: ["Filter coffee", "Maps that still work offline", "The 2am idea that didn't get shipped"]
+  specialThanks: [
+    "Aswathy, for the pep talks",
+    "Santhwana, for the stern nudges",
+    "Filter coffee",
+    "Maps that still work offline"
+  ]
 };
 
 export const contact = {
   heading: "Roll credits. Or roll with me.",
   subheading:
-    "If any of this resonated \u2014 or even mildly amused you \u2014 perhaps we should talk. The next chapter's casting is open.",
+    "If any of this resonated — or even mildly amused you — perhaps we should talk. The next chapter's casting is open.",
   email: "hello.kc@example.com",
   phone: "+91 98xxx xxx12",
-  city: "Bengaluru, IN",
+  city: "Trivandrum, IN",
   socials: [
     { label: "Letterboxd", handle: "@kc.reels" },
     { label: "Instagram", handle: "@kc.offscreen" },

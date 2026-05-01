@@ -64,9 +64,27 @@ const RollCredits = () => {
           {/* Credits */}
           <div className="col-span-12 md:col-span-5">
             <p className="font-display italic text-2xl text-[#E8B95E]">Roll Credits.</p>
+
+            {/* Special Producers callout */}
+            <div className="mt-5 rounded-2xl border border-[#E8B95E]/30 bg-[#FAF5EC]/[0.04] p-5">
+              <p className="font-mono-kc text-[10px] tracking-[0.3em] uppercase text-[#E8B95E]">
+                A Feature Presentation By
+              </p>
+              <div className="mt-2 flex items-baseline flex-wrap gap-x-3 gap-y-1">
+                <span className="font-display text-2xl md:text-3xl text-[#FAF5EC]">Aswathy</span>
+                <span className="font-display italic text-[#FAF5EC]/60">&amp;</span>
+                <span className="font-display text-2xl md:text-3xl text-[#FAF5EC]">Santhwana</span>
+              </div>
+              <p className="mt-2 text-sm text-[#FAF5EC]/75 leading-relaxed">
+                The executive producers, matchmakers-in-chief, and the only reason this feature
+                ever got greenlit. Credits where due — loudly.
+              </p>
+            </div>
+
             <div className="mt-5">
               <CreditRow label="Directed by" value={credits.directedBy} />
-              <CreditRow label="Produced by" value={credits.producedBy} />
+              <CreditRow label="Produced by" value="Aswathy & Santhwana" />
+              <CreditRow label="Casting by" value="Aswathy & Santhwana (again)" />
               <CreditRow label="Music by" value={credits.musicBy} />
               <CreditRow label="Starring" value={`${profile.fullTitle} as himself`} />
             </div>

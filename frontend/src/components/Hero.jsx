@@ -66,7 +66,8 @@ const Hero = () => {
                 <div className="relative font-mono-kc text-xs space-y-1 text-[#FAF5EC]/80">
                   <div className="flex justify-between"><span>Age</span><span>{profile.age}</span></div>
                   <div className="flex justify-between"><span>Role</span><span>{profile.profession}</span></div>
-                  <div className="flex justify-between"><span>Location</span><span>{profile.city}</span></div>
+                  <div className="flex justify-between"><span>Based in</span><span>{profile.city}</span></div>
+                  <div className="flex justify-between"><span>Hometown</span><span>{profile.hometown}</span></div>
                   <div className="flex justify-between"><span>Wheels</span><span>{profile.car}</span></div>
                 </div>
                 <div className="relative flex items-center justify-between border-t border-[#FAF5EC]/15 pt-4">
